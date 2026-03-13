@@ -1,1 +1,1 @@
-Here you'll my NixOS - Hyprland configuration
+Welcome to my NixOS-Hyprland configuration!
