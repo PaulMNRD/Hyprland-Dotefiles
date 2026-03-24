@@ -4,8 +4,11 @@
       self.nixosModules.testVmHardware
 
       self.nixosModules.keyboard
-      self.nixosModules.nix
       self.nixosModules.localization
+      self.nixosModules.nix
+      self.nixosModules.pipewire
+      self.nixosModules.sddm
+      self.nixosModules.user
     ];
 
     boot.loader.grub.enable = true;
