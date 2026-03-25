@@ -1,20 +1,25 @@
 { self, ... }: {
   flake.nixosModules.testVmConfiguration = { pkgs, ... }: {
-    imports = [
-      self.nixosModules.testVmHardware
+    imports = with self.nixosModules; [
+      testVmHardware
 
-      self.nixosModules.keyboard
-      self.nixosModules.localization
-      self.nixosModules.nix
-      self.nixosModules.pipewire
-      self.nixosModules.sddm
-      self.nixosModules.user
+      bluetooth
+      keyboard
+      localization
+      networking
+      nix
+      pipewire
+      sddm
+      user
     ];
 
     boot.loader.grub.enable = true;
     boot.loader.grub.device = "/dev/vda";
     boot.loader.grub.useOSProber = true;
     boot.kernelPackages = pkgs.linuxPackages_latest;
+
+    networking.hostName = "paul-laptop";
+    zramSwap.enable = true;
 
     environment.systemPackages = with pkgs; [
       helix
