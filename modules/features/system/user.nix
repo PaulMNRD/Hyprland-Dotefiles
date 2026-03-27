@@ -14,7 +14,7 @@
       useGlobalPkgs = true;
       useUserPackages = true;
       extraSpecialArgs = { inherit (config) preferences; };
-      users.${username} = self.homeModules.home;
+      users.${username}.imports = config.preferences.homeModules;
     };
   };
 }

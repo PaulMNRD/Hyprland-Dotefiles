@@ -17,6 +17,9 @@
 
     preferences = {
       hostname = "paul-test-vm";
+      homeModules = with self.homeModules; [
+        home
+      ];
     };
 
     boot.loader.grub.enable = true;

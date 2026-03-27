@@ -21,6 +21,11 @@
       hostname = lib.mkOption {
         type = lib.types.str;
       };
+
+      homeModules = lib.mkOption {
+        type = lib.types.listOf lib.types.deferredModule;
+        default = [];
+      };
     };
   };
 }
