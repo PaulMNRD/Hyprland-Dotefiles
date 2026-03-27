@@ -9,7 +9,7 @@
       networking
       nix
       pipewire
-      sddm
+      #sddm
       user
     ];
 

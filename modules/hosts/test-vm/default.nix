@@ -2,7 +2,7 @@
   flake.nixosConfigurations.testVm = inputs.nixpkgs.lib.nixosSystem {
     modules = [
       self.nixosModules.testVmConfiguration
-      self.homeModules.testVmHome
+      inputs.home-manager.nixosModules.home-manager
     ];
   };
 }
