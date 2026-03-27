@@ -3,6 +3,8 @@
     imports = with self.nixosModules; [
       testVmHardware
 
+      options
+
       bluetooth
       keyboard
       localization
@@ -13,13 +15,14 @@
       user
     ];
 
+    preferences = {
+      hostname = "paul-test-vm";
+    };
+
     boot.loader.grub.enable = true;
     boot.loader.grub.device = "/dev/vda";
     boot.loader.grub.useOSProber = true;
     boot.kernelPackages = pkgs.linuxPackages_latest;
-
-    networking.hostName = "paul-laptop";
-    zramSwap.enable = true;
 
     environment.systemPackages = with pkgs; [
       helix
