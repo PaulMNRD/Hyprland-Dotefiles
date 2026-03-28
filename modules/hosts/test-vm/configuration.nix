@@ -6,12 +6,13 @@
       options
 
       bluetooth
+      hyprland
       keyboard
       localization
       networking
       nix
       pipewire
-      #sddm
+      sddm
       user
     ];
 
