@@ -1,4 +1,9 @@
-{
+{ lib, ... }: {
+  options.flake.homeModules = lib.mkOption {
+    type = lib.types.lazyAttrsOf lib.types.deferredModule;
+    default = {};
+  };
+
   config = {
     systems = [
       "x86_64-linux"

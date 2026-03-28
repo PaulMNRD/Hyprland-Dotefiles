@@ -19,7 +19,10 @@
     preferences = {
       hostname = "paul-test-vm";
       homeModules = with self.homeModules; [
+        git
         home
+        hyprland
+        kitty
       ];
     };
 

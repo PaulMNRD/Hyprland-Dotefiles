@@ -13,6 +13,7 @@
     home-manager = {
       useGlobalPkgs = true;
       useUserPackages = true;
+      backupFileExtension = "backup";
       extraSpecialArgs = { inherit (config) preferences; };
       users.${username}.imports = config.preferences.homeModules;
     };
