@@ -5,6 +5,7 @@
       hyprlandBindings
       hyprlandDecoration
       hyprlandGeneral
+      hyprpaper
     ];
 
      wayland.windowManager.hyprland = {
