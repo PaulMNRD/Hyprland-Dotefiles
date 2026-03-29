@@ -1,5 +1,12 @@
-{
+{ self, ... }: {
   flake.homeModules.hyprland = { pkgs, ... }: {
+    imports = with self.homeModules; [ 
+      hyprlandAnimations
+      hyprlandBindings
+      hyprlandDecoration
+      hyprlandGeneral
+    ];
+
      wayland.windowManager.hyprland = {
       enable = true;
       package = pkgs.hyprland;
@@ -10,9 +17,7 @@
           disable_hyprland_logo = true;
         };
 
-        bind = [
-          "SUPER, T, exec, kitty"
-        ];
+        monitor = ", preferred, auto, 1";
       };
     };
   };
