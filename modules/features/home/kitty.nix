@@ -7,7 +7,6 @@
         confirm_os_window_close = 0;
         enable_audio_bell = false;
         font_size = 14;
-        cursor_trail = 5;
         background_opacity = 0.8;
         background_blur = 0;
       };
