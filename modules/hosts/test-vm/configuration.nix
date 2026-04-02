@@ -20,6 +20,7 @@
       hostname = "paul-test-vm";
       homeModules = with self.homeModules; [
         git
+        helix
         home
         hyprland
         kitty

@@ -6,7 +6,7 @@
       hyprlandDecoration
       hyprlandGeneral
       hyprpaper
-      quickshell
+      #quickshell
     ];
 
      wayland.windowManager.hyprland = {
