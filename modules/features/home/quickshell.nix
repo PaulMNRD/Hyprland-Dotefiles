@@ -7,7 +7,7 @@
       configs = {
         default = "${inputs.self}/assets/quickshell";
       };
-:
+
       activeConfig = "default";
 
       systemd = {

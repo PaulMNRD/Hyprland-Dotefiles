@@ -13,7 +13,7 @@
       networking
       nix
       pipewire
-      sddm
+      #sddm
       user
     ];
 
@@ -25,7 +25,7 @@
         helix
         home
         #hyprland
-        kitty
+        #kitty
       ];
     };
 
