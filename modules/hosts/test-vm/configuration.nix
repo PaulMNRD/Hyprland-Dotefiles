@@ -6,7 +6,8 @@
       options
 
       bluetooth
-      hyprland
+      gnome
+      #hyprland
       keyboard
       localization
       networking
@@ -20,9 +21,10 @@
       hostname = "paul-test-vm";
       homeModules = with self.homeModules; [
         git
+        gnome
         helix
         home
-        hyprland
+        #hyprland
         kitty
       ];
     };

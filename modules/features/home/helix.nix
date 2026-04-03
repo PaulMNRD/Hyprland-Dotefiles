@@ -3,15 +3,8 @@
     programs.helix = {
       enable = true;
       
-      themes = {
-        default = {
-          inherits = "catppuccin_frappe";
-          "ui.background" = { };
-        }; 
-      };
-      
       settings = {
-        theme = "default";
+        theme = "catppuccin_frappe";
         editor.cursor-shape = {
           normal = "block";
           insert = "bar";
