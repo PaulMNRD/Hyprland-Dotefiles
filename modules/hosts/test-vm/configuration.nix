@@ -6,14 +6,14 @@
       options
 
       bluetooth
-      gnome
-      #hyprland
+      #gnome
+      hyprland
       keyboard
       localization
       networking
       nix
       pipewire
-      #sddm
+      sddm
       user
     ];
 
@@ -21,11 +21,11 @@
       hostname = "paul-test-vm";
       homeModules = with self.homeModules; [
         git
-        gnome
+        #gnome
         helix
         home
-        #hyprland
-        #kitty
+        hyprland
+        kitty
       ];
     };
 

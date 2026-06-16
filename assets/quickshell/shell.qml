@@ -1,19 +1,6 @@
 import Quickshell
-import QtQuick
+import "."
 
 ShellRoot {
-    PanelWindow {
-        anchors {
-            top: true
-            left: true
-            right: true
-        }
-        height: 30
-
-        Text {
-            anchors.centerIn: parent
-            text: "Quickshell"
-            color: "white"
-        }
-    }
+    DynamicIsland {}
 }
