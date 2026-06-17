@@ -4,7 +4,7 @@
       enable = true;
       
       settings = {
-        theme = "catppuccin_frappe";
+        theme = "catppuccin_mocha";
         editor.cursor-shape = {
           normal = "block";
           insert = "bar";

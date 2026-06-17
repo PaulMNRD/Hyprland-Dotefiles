@@ -10,7 +10,7 @@
         background_opacity = 0.8;
         background_blur = 0;
       };
-      themeFile = "Catppuccin-Frappe";
+      themeFile = "Catppuccin-Mocha";
     };
   };
 }

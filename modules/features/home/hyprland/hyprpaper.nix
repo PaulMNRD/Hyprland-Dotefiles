@@ -1,13 +1,16 @@
 { inputs, ... }: {
   flake.homeModules.hyprpaper = { ... }:
   let
-    wallpaper = "${inputs.self}/assets/wallpapers/outer-wilds.png";
+    wallpaper = "${inputs.self}/assets/wallpapers/test-pic.jpg";
   in {
     services.hyprpaper = {
       enable = true;
       settings = {
-        preload = [ wallpaper ];
-        wallpaper = [ ", ${wallpaper}" ];
+        splash = false;
+        wallpaper = [{
+          monitor= "";
+          path = wallpaper;
+        }];
       };
     };
   };
