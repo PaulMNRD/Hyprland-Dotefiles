@@ -25,6 +25,7 @@
         helix
         home
         hyprland
+        vscodium
       ];
     };
 

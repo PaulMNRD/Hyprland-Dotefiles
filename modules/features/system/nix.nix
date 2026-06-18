@@ -1,7 +1,10 @@
-{
+{ inputs, ... }: {
   flake.nixosModules.nix = {
-    nixpkgs.config.allowUnfree = true;
-    
+    nixpkgs = {
+      config.allowUnfree = true;
+      overlays = [ inputs.nix-vscode-extensions.overlays.default ];
+    };
+        
     nix.gc = {
       automatic = true;
       dates = "weekly";
