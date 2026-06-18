@@ -1,14 +1,15 @@
 { self, inputs, ... }: {
   flake.homeModules.hyprland = { pkgs, ... }: {
     imports = with self.homeModules; [ 
-      hyprpaper
+      awww
+      #hyprpaper
       kitty
-      quickshell
+      #quickshell
     ];
 
      wayland.windowManager.hyprland = {
       enable = true;
-      package = pkgs.hyprland;
+      systemd.enable = false;
     };
 
     xdg.configFile."hypr" = {
