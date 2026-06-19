@@ -1,6 +1,11 @@
 {
   flake.homeModules.helix = { pkgs, ... }: {
-    programs.helix = {
+    
+    home.sessionVariables = {
+      EDITOR = "hx";
+    };
+    
+    programs.helix = {      
       enable = true;
       
       settings = {

@@ -22,5 +22,5 @@ for i = 1, 10 do
     hl.bind(mainMod .. " + SHIFT + " .. key, hl.dsp.window.move({ workspace = i }))
 end
 
-hl.bind(mainMod .. " + CTRL + left", hl.dsp.focus({ workspace = "e-1" }))
-hl.bind(mainMod .. " + CTRL + right", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + P", hl.dsp.focus({ workspace = "e-1" }))
+hl.bind(mainMod .. " + N", hl.dsp.focus({ workspace = "e+1" }))

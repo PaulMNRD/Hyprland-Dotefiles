@@ -20,11 +20,13 @@
     preferences = {
       hostname = "paul-test-vm";
       homeModules = with self.homeModules; [
+        fish
         git
         #gnome
         helix
         home
         hyprland
+        starship
         vscodium
       ];
     };

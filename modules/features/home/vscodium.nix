@@ -39,7 +39,7 @@
             "window.menuBarVisibility" = "hidden";
             "workbench.activityBar.location" = "hidden";
             "workbench.editor.editorActionsLocation" = "hidden";
-            "workbench.colorTheme" = "Catppuccin Frappé";
+            "workbench.colorTheme" = "Catppuccin Mocha";
             "workbench.iconTheme" = "material-icon-theme";
             "workbench.sideBar.location" = "right";
             "workbench.statusBar.visible" = false;
