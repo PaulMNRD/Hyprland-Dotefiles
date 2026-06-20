@@ -1,6 +1,6 @@
 require("animations")
+require("cursor")
 require("decoration")
-require("environment")
 require("general")
 require("gestures")
 require("inputs")

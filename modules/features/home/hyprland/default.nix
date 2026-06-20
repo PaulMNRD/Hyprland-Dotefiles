@@ -2,6 +2,7 @@
   flake.homeModules.hyprland = { pkgs, ... }: {
     imports = with self.homeModules; [ 
       awww
+      cursor
       #hyprpaper
       kitty
       #quickshell

@@ -12,7 +12,7 @@
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
     
-    inputs.pixie-sddm.url = "github:xCaptaiN09/pixie-sddm";
+    pixie-sddm.url = "github:xCaptaiN09/pixie-sddm";
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
