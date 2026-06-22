@@ -13,6 +13,7 @@
       networking
       nix
       pipewire
+      boot
       sddm
       user
     ];
@@ -33,28 +34,10 @@
 
     boot = {
       kernelPackages = pkgs.linuxPackages_latest;
-      consoleLogLevel = 0;
-      initrd.verbose = false;
-      loader.timeout = 0;
       loader.grub = {
         enable = true;
         device = "/dev/vda";
-        # useOSProber = true;
         timeoutStyle = "hidden";
-      };
-
-      kernelParams = [
-        "quiet"
-        "splash"
-        "loglevel=3"
-        "rd.systemd.show_status=false"
-        "rd.udev.log_level=3"
-        "udev.log_priority=3"
-      ];
-
-      plymouth = {
-        enable = true;
-        theme = "breeze";
       };
     };
 
