@@ -5,7 +5,7 @@
       cursor
       #hyprpaper
       kitty
-      #quickshell
+      quickshell
     ];
 
      wayland.windowManager.hyprland = {
