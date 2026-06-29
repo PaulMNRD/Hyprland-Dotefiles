@@ -1,7 +1,7 @@
 { inputs, ... }: {
   flake.homeModules.awww = { pkgs, ... }:
   let
-      wallpaper = "${inputs.self}/assets/wallpapers/lofi-cat.jpg";
+      wallpaper = "${inputs.self}/assets/wallpapers/piano-anime.png";
   in {
     services.awww.enable = true;
 
