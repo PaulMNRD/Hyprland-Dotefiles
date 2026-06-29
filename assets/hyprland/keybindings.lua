@@ -8,6 +8,7 @@ hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox"))
 -- Actions
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
+hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ action = "toggle" }))
 
 -- Navigation
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -24,3 +25,9 @@ end
 
 hl.bind(mainMod .. " + P", hl.dsp.focus({ workspace = "e-1" }))
 hl.bind(mainMod .. " + N", hl.dsp.focus({ workspace = "e+1" }))
+hl.bind(mainMod .. " + SHIFT + P", hl.dsp.window.move({ workspace = "-1" }))
+hl.bind(mainMod .. " + SHIFT + N", hl.dsp.window.move({ workspace = "+1" }))
+
+-- Windows
+hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true, drag = true })
+hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true, drag = true })
