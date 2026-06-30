@@ -18,3 +18,10 @@ hl.window_rule({
     },
     no_focus = true,
 })
+
+-- Kitty
+hl.window_rule({
+    match = { class = "kitty" },
+    float = true,
+    size = { 900, 550 },
+})
