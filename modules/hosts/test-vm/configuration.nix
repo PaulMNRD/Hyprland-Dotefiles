@@ -27,6 +27,7 @@
         helix
         home
         hyprland
+        java
         starship
         vscodium
       ];
