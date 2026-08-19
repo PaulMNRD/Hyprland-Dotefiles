@@ -10,3 +10,8 @@ require("misc")
 require("monitors")
 --require("start")
 require("window-rules")
+
+-- DMS
+require("dms.colors")
+require("dms.layout")
+require("dms.outputs")

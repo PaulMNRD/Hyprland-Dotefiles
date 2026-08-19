@@ -1,10 +1,13 @@
 { ... }: {
-  flake.homeModules.Java = { pkgs, ... }: {
+  flake.homeModules.java = { pkgs, ... }: {
     programs.java = {
       enable = true;
       package = pkgs.jdk25;
     };
 
-    home.packages = [ pkgs.jdt-language-server ];
+    home.packages = with pkgs; [
+      jdt-language-server
+      maven
+    ];
   };
 }

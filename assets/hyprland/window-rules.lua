@@ -19,9 +19,8 @@ hl.window_rule({
     no_focus = true,
 })
 
--- Kitty
 hl.window_rule({
-    match = { class = "kitty" },
-    float = true,
-    size = { 900, 550 },
+    name = "dms-window-float",
+    match = { class = "^(org.quickshell)$" },
+    floating = true,
 })

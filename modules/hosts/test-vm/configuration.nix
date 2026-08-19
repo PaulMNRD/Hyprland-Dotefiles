@@ -6,7 +6,8 @@
       options
 
       bluetooth
-      #gnome
+      dms
+      # gnome
       hyprland
       keyboard
       localization
@@ -23,11 +24,11 @@
       homeModules = with self.homeModules; [
         fish
         git
-        #gnome
+        # gnome
         helix
         home
         hyprland
-        java
+        # java
         starship
         vscodium
       ];
