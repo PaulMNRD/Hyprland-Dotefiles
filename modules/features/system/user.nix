@@ -5,7 +5,7 @@
     programs.fish.enable = true;
     users.users.${username} = {
       isNormalUser = true;
-      description = "${username}'s account";
+      description = config.preferences.user.fullName;
       extraGroups = [ "networkmanager" "wheel" ];
       shell = pkgs.fish;
     };

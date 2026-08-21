@@ -6,7 +6,6 @@
       options
 
       bluetooth
-      dms
       # gnome
       hyprland
       keyboard

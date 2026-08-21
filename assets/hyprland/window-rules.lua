@@ -19,8 +19,3 @@ hl.window_rule({
     no_focus = true,
 })
 
-hl.window_rule({
-    name = "dms-window-float",
-    match = { class = "^(org.quickshell)$" },
-    floating = true,
-})
