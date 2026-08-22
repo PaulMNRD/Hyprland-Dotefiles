@@ -3,6 +3,7 @@
     modules = [
       self.nixosModules.testVmConfiguration
       inputs.home-manager.nixosModules.home-manager
+      inputs.catppuccin.nixosModules.catppuccin
     ];
   };
 }

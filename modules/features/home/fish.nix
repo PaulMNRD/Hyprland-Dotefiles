@@ -6,5 +6,8 @@
         set fish_greeting
       '';
     };
+
+    catppuccin.fish.enable = true;
+    catppuccin.fish.flavor = "mocha";
   };
 }

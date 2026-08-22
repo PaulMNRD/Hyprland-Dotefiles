@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ self, inputs, ... }: {
   flake.nixosModules.user = { config, pkgs, ... }: 
   let username = config.preferences.user.name;
   in {
@@ -15,7 +15,14 @@
       useUserPackages = true;
       backupFileExtension = "backup";
       extraSpecialArgs = { inherit (config) preferences; };
-      users.${username}.imports = config.preferences.homeModules;
+      users.${username}.imports = config.preferences.homeModules
+        ++ [ inputs.catppuccin.homeModules.catppuccin ];
+    };
+
+    system.activationScripts.userIcon = {
+      text = ''
+        install -Dm644 ${inputs.self}/assets/avatar.png /var/lib/AccountsService/icons/${username}
+      '';
     };
   };
 }

@@ -1,28 +1,24 @@
 { inputs, ... }: {
   flake.nixosModules.sddm = { pkgs, ... }:
     let
-        wallpaper = "${inputs.self}/assets/wallpapers/lofi-cat.jpg";
+        wallpaper = "${inputs.self}/assets/wallpapers/outer-wilds.png";
         avatar = "${inputs.self}/assets/avatar.png";
     in {
-      services.xserver.enable = true;
       services.displayManager.sddm = {
+        wayland.enable = true;
         enable = true;
-        # wayland.enable = true;
-        theme = "pixie";
-        # package = pkgs.kdePackages.sddm;
-
-        extraPackages = with pkgs; [
-          kdePackages.qtdeclarative
-          kdePackages.qtsvg
-          kdePackages.qt5compat
-        ];
+        theme = "catppuccin-mocha-mauve";
+        package = pkgs.kdePackages.sddm;
       };
 
-      environment.systemPackages = [
-        (inputs.pixie-sddm.packages.${pkgs.stdenv.hostPlatform.system}.pixie-sddm.override {
-          background = wallpaper;
-          avatar = avatar;
-        })
-      ];
+      environment.systemPackages = [(
+          pkgs.catppuccin-sddm.override {
+            flavor = "mocha";
+            accent = "mauve";
+            background = wallpaper;
+            loginBackground = true;
+            userIcon = true;
+          }
+        )];
     };
 }

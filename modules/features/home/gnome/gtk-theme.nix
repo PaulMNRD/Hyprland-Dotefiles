@@ -9,6 +9,12 @@
           cp -r ${inputs.self}/assets/gtk/Catppuccin-Dark $out/share/themes/
         '';
       };
+      iconTheme = {
+        name = "Fluent-purple-dark";
+        package = pkgs.fluent-icon-theme.override {
+          colorVariants = [ "purple" ];
+        };
+      };
     };
 
     home.file.".config/gtk-4.0/gtk.css".source =
@@ -21,9 +27,17 @@
     };
 
     dconf.settings = {
+      "org/gnome/desktop/wm/preferences" = {
+        button-layout = ":minimize,maximize,close";
+      };
       "org/gnome/desktop/interface" = {
         gtk-theme = "Catppuccin-Dark";
+        icon-theme = "Fluent-purple-dark";
         color-scheme = "prefer-dark";
+        accent-color = "purple";
+      };
+      "org/gnome/shell/extensions/user-theme" = {
+        name = "Catppuccin-Dark";
       };
     };
   };

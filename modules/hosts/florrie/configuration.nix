@@ -27,6 +27,7 @@
         hyprland
         starship
         vscodium
+        zen-browser
       ];
     };
 

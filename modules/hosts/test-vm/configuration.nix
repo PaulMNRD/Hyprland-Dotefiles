@@ -30,6 +30,7 @@
         # java
         starship
         vscodium
+        zen-browser
       ];
     };
 
