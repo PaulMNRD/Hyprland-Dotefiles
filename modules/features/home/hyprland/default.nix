@@ -6,6 +6,7 @@
       #hyprpaper
       kitty
       # quickshell
+      hypr-utilities
     ];
 
      wayland.windowManager.hyprland = {

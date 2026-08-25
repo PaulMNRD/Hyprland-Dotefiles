@@ -6,11 +6,6 @@
       sddm  
     ];
 
-    environment.systemPackages = with pkgs; [
-      impala
-      bluetui
-    ];
-    
     programs.hyprland = {
       enable = true;
       xwayland.enable = true;
