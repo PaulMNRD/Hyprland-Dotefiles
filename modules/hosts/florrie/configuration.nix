@@ -13,21 +13,17 @@
       nix
       pipewire
       boot
-      sddm
       user
     ];
 
     preferences = {
-      hostname = "paul-test-vm";
+      hostname = "paul-test-laptop";
       homeModules = with self.homeModules; [
         fish
         git
         helix
         home
-        hyprland
         starship
-        vscodium
-        zen-browser
       ];
     };
 

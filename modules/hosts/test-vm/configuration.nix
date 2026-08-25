@@ -6,15 +6,13 @@
       options
 
       bluetooth
-      gnome
-      # hyprland
+      hyprland
       keyboard
       localization
       networking
       nix
       pipewire
       boot
-      # sddm
       user
     ];
 
@@ -23,14 +21,12 @@
       homeModules = with self.homeModules; [
         fish
         git
-        gnome
         helix
         home
-        # hyprland
         # java
         starship
-        vscodium
-        zen-browser
+        # vscodium
+        # zen-browser
       ];
     };
 

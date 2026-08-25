@@ -1,11 +1,9 @@
 { self, ... }: {
   flake.nixosModules.gnome = { lib, pkgs, ... }: {
-    imports = with self.nixosModules; [
-      sddm  
-    ];
-    
+    preferences.homeModules = [ self.homeModules.gnome ];
+
     services = {
-      # displayManager.gdm.enable = true;
+      displayManager.gdm.enable = true;
       desktopManager.gnome.enable = true;
       gnome.core-apps.enable = false;
     };

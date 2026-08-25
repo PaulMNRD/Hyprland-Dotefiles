@@ -13,13 +13,6 @@
     catppuccin.url = "github:catppuccin/nix/release-26.05";
 
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-    
-    pixie-sddm.url = "github:xCaptaiN09/pixie-sddm";
-
-    zen-browser = {
-      url = "github:youwen5/zen-browser-flake";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
   };
 
   outputs = inputs: inputs.flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);

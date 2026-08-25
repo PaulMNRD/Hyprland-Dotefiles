@@ -39,8 +39,7 @@
           };
           "C-s" = ":w";
           "C-q" = ":bc";
-          # "C-t" = ":sh kitty --working-directory . > /dev/null 2>&1 &";
-          "C-v" = ":sh vibe -p '%{selection}'";
+          "C-t" = ":sh kitty --working-directory . > /dev/null 2>&1 &";
         };
       };
     };
