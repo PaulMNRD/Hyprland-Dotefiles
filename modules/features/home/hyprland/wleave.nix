@@ -7,12 +7,14 @@
         margin = 200;
         buttons-per-row = "4";
         close-on-lost-focus = true;
+        no-version-info = true;
+        delay-command-ms = 300;
         buttons = [
           {
             label = "lock";
             text = "Lock";
             keybind = "l";
-            action = "";
+            action = "loginctl lock-session";
             icon = "${inputs.self}/assets/wleave/icons/lock.svg";
           }
           {
