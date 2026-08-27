@@ -9,6 +9,7 @@
       hyprland
       keyboard
       localization
+      logind
       networking
       nix
       pipewire

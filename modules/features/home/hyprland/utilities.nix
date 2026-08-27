@@ -2,12 +2,14 @@
   flake.homeModules.hypr-utilities = { pkgs, ... }: {
     home.packages = with pkgs; [
       bluetui
+      brightnessctl
       hyprpicker
       impala
       wl-clipboard
     ];
 
     imports = with self.homeModules; [
+      hypridle
       hyprlock
       wleave
     ];
