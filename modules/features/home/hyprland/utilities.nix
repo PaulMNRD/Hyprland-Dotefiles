@@ -11,35 +11,44 @@
     catppuccin.btop.enable = true;
     catppuccin.btop.flavor = "mocha";
 
-    programs.wlogout = {
+    programs.wleave = {
       enable = true;
-      layout = [
-        {
-          keybind = "l";
-          label = "lock";
-          text = "Lock";
-        }
-        {
-          action = "uwsm stop";
-          keybind = "x";
-          label = "logout";
-          text = "Logout";
-        }
-        {
-          action = "systemctl poweroff";
-          keybind = "q";
-          label = "shutdown";
-          text = "Shutdown";
-        }
-        {
-          action = "systemctl reboot";
-          keybind = "r";
-          label = "restart";
-          text = "Restart";
-        }
-      ];
-
-      style = "${inputs.self}/assets/wlogout/style.css";
+      style = builtins.readFile "${inputs.self}/assets/wleave/style.css";
+      settings = {
+        margin = 200;
+        buttons-per-row = "4";
+        close-on-lost-focus = true;
+        buttons = [
+          {
+            label = "lock";
+            text = "Lock";
+            keybind = "l";
+            action = "";
+            icon = "${inputs.self}/assets/wleave/icons/lock.svg";
+          }
+          {
+            label = "logout";
+            text = "Logout";
+            keybind = "x";
+            action = "uwsm stop";
+            icon = "${inputs.self}/assets/wleave/icons/logout.svg";
+          }
+          {
+            label = "shutdown";
+            text = "Shutdown";
+            keybind = "s";
+            action = "systemctl poweroff";
+            icon = "${inputs.self}/assets/wleave/icons/shutdown.svg";
+          }
+          {
+            label = "reboot";
+            text = "Restart";
+            keybind = "r";
+            action = "systemctl reboot";
+            icon = "${inputs.self}/assets/wleave/icons/reboot.svg";
+          }
+        ];
+      };
     };
   };
 }
