@@ -62,5 +62,7 @@
         ];
       };
     };
+
+    programs.hyprlock.enable = true;
   };
 }
