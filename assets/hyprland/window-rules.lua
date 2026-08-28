@@ -19,3 +19,8 @@ hl.window_rule({
     no_focus = true,
 })
 
+hl.window_rule({
+    name = "default-floating-size",
+    match = { float = true },
+    size = {"(monitor_w*0.5)", "monitor_h*0.5"},
+})

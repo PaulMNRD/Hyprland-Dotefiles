@@ -25,9 +25,9 @@
         helix
         home
         # java
+        librewolf
         starship
         # vscodium
-        # zen-browser
       ];
     };
 

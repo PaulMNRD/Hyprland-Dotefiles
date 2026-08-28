@@ -3,6 +3,7 @@
     imports = with self.homeModules; [
       mistral
       yazi
+      gitui
     ];
     
     home.sessionVariables = {
@@ -39,7 +40,8 @@
           };
           "C-s" = ":w";
           "C-q" = ":bc";
-          "C-t" = ":sh kitty --working-directory . > /dev/null 2>&1 &";
+          "C-t" = ":sh kitten @ launch --no-response --type=tab --cwd=current &> /dev/null";
+          "C-g" = ":sh kitten @ launch --no-response --type=tab --cwd=current --tab-title=Git gitui &> /dev/null";
         };
       };
     };
