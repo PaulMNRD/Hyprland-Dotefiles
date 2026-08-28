@@ -13,9 +13,13 @@
       hyprlock
       wleave
     ];
+
+    services.polkit-gnome.enable = true;
     
     programs.btop.enable = true;
     catppuccin.btop.enable = true;
     catppuccin.btop.flavor = "mocha";
+
+    services.hyprlauncher.enable = true;
   };
 }

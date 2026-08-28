@@ -1,5 +1,5 @@
 { inputs, ... }: {
-  flake.homeModules.gtkTheme = { pkgs, ... }: {
+  flake.homeModules.gtk-theme = { pkgs, ... }: {
     gtk = {
       enable = true;
       theme = {
@@ -26,6 +26,7 @@
       recursive = true;
     };
 
+    dconf.enable = true;
     dconf.settings = {
       "org/gnome/desktop/wm/preferences" = {
         button-layout = ":minimize,maximize,close";
@@ -35,9 +36,6 @@
         icon-theme = "Fluent-purple-dark";
         color-scheme = "prefer-dark";
         accent-color = "purple";
-      };
-      "org/gnome/shell/extensions/user-theme" = {
-        name = "Catppuccin-Dark";
       };
     };
   };

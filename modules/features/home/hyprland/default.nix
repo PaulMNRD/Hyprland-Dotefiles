@@ -3,10 +3,11 @@
     imports = with self.homeModules; [ 
       awww
       cursor
+      gtk-theme
+      hypr-utilities
       #hyprpaper
       kitty
       # quickshell
-      hypr-utilities
     ];
 
      wayland.windowManager.hyprland = {

@@ -8,7 +8,7 @@
     imports = with self.homeModules; [
       cursor
       terminal
-      gtkTheme
+      gtk-theme
     ];
 
     home.file = {
@@ -18,7 +18,6 @@
       };
     };
 
-    dconf.enable = true;
     dconf.settings = {
       "org/gnome/desktop/app-folders" = {
         folder-children = [ "SystemApps" "Utilities" ];
@@ -66,6 +65,9 @@
       };
       "org/gnome/shell/extensions/alphabetical-app-grid" = {
         folder-order-position = "end";
+      };
+      "org/gnome/shell/extensions/user-theme" = {
+        name = "Catppuccin-Dark";
       };
     };
   };
