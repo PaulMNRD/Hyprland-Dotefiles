@@ -25,6 +25,7 @@
         helix
         home
         starship
+        zen-browser
       ];
     };
 
