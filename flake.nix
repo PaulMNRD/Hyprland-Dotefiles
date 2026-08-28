@@ -18,6 +18,11 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    hyprpolkitagent = {
+      url = "github:hyprwm/hyprpolkitagent/main";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 
