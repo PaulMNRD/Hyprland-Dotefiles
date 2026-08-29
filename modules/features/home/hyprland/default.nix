@@ -19,5 +19,12 @@
       source = "${inputs.self}/assets/hyprland";
       recursive = true;
     };
+
+    home.file = {
+      "Pictures/Wallpapers" = {
+        source = "${inputs.self}/assets/wallpapers";
+        recursive = true;
+      };
+    };
   };
 }

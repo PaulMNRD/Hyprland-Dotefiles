@@ -11,6 +11,7 @@
     imports = with self.homeModules; [
       hypridle
       hyprlock
+      rofi
       wlogout
     ];
 
