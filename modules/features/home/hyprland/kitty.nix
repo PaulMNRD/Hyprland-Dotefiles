@@ -21,6 +21,7 @@
       keybindings = {
         "ctrl+shift+x" = "launch --type=tab --cwd=current --tab-title=Editor hx .";
         "ctrl+shift+g" = "launch --type=tab --cwd=current --tab-title=Git gitui";
+        "ctrl+shift+e" = "launch --type=tab --cwd=current --tab-title=Explorer yazi";
         "alt+1" = "goto_tab 1";
         "alt+2" = "goto_tab 2";
         "alt+3" = "goto_tab 3";
