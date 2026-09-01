@@ -30,6 +30,7 @@
           "$conda"
           "[](fg:sapphire bg:lavender)"
           "$time"
+          "$battery"
           "[ ](fg:lavender)"
           "$cmd_duration"
           "$line_break"
@@ -148,6 +149,25 @@
           time_format = "%R";
           style = "bg:lavender";
           format = "[[  $time ](fg:crust bg:lavender)]($style)";
+        };
+
+        battery = {
+          disabled = false;
+          format = "[[$symbol$percentage ](fg:crust bg:lavender)($style)]";
+          display = [
+            {
+              threshold = 10;
+              style = "bold red";
+            }
+            {
+              threshold = 30;
+              style = "bold yellow";
+            }
+            {
+              threshold = 100;
+              style = "bold green";
+            }
+          ];
         };
 
         line_break.disabled = true;

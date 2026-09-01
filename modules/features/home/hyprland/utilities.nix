@@ -16,6 +16,9 @@
     ];
 
     services.polkit-gnome.enable = true;
+    services.dunst.enable = true;
+    catppuccin.dunst.enable = true;
+    catppuccin.dunst.flavor = "mocha";
 
     programs.btop.enable = true;
     catppuccin.btop.enable = true;

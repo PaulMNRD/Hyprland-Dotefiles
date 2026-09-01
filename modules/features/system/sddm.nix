@@ -2,11 +2,9 @@
   flake.nixosModules.sddm = { pkgs, ... }:
     let
         wallpaper = "${inputs.self}/assets/wallpapers/outer-wilds.png";
-        avatar = "${inputs.self}/assets/avatar.png";
     in {
-      services.xserver.enable = true;
       services.displayManager.sddm = {
-        # wayland.enable = true;
+        wayland.enable = true;
         enable = true;
         theme = "catppuccin-mocha-mauve";
         package = pkgs.kdePackages.sddm;

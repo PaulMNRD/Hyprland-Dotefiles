@@ -6,6 +6,11 @@
       sddm  
     ];
 
+    environment.systemPackages = with pkgs; [
+      qt5.qtwayland
+      qt6.qtwayland
+    ];
+
     programs.hyprland = {
       enable = true;
       xwayland.enable = true;
