@@ -9,6 +9,7 @@
     ];
 
     imports = with self.homeModules; [
+      battery
       hypridle
       hyprlock
       rofi
