@@ -153,19 +153,11 @@
 
         battery = {
           disabled = false;
-          format = "[[$symbol$percentage ](fg:crust bg:lavender)($style)]";
+          format = "[[ $percentage ](fg:crust bg:lavender)]($style)";
           display = [
             {
-              threshold = 10;
-              style = "bold red";
-            }
-            {
-              threshold = 30;
-              style = "bold yellow";
-            }
-            {
               threshold = 100;
-              style = "bold green";
+              style = "bold";
             }
           ];
         };
