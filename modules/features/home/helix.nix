@@ -6,6 +6,10 @@
       gitui
     ];
     
+    home.packages = with pkgs; [
+      nixd
+    ];
+    
     home.sessionVariables = {
       EDITOR = "hx";
     };

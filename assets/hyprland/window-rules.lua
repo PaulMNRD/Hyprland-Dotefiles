@@ -18,9 +18,19 @@ hl.window_rule({
     },
     no_focus = true,
 })
+hl.window_rule({
+    name = "fix-xwayland-screen-sharing",
+    match = { class = "xwaylandvideobridge" },
+    no_initial_focus = true,
+    no_focus = true,
+    no_anim = true,
+    no_blur = true,
+    max_size = {1,1},
+    opacity = 0.0,
+})
 
 hl.window_rule({
-    name = "default-floating-size",
-    match = { float = true },
-    size = {"(monitor_w*0.5)", "monitor_h*0.5"},
+    match = { class = "kitty|com.gabm.satty" },
+    float = true,
+    size = { "(monitor_w*0.8)", "(monitor_h*0.8)" },
 })

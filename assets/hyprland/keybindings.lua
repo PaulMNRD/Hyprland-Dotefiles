@@ -2,8 +2,8 @@ local mainMod = "SUPER"
 
 -- Programs
 hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("kitty"))
-hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("firefox"))
---hl.bind(mainMod .. " + E", hl.dsp.exec_cmd(fileManager))
+hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("zen-beta"))
+hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("kitty --title \"Explorer\" yazi"))
 
 -- Actions
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
@@ -31,3 +31,7 @@ hl.bind(mainMod .. " + SHIFT + N", hl.dsp.window.move({ workspace = "+1" }))
 -- Windows
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
+
+
+-- System tools
+hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | satty -f - '))

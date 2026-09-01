@@ -19,5 +19,6 @@
 
     security.pam.services.hyprlock = {};
     services.gnome.gnome-keyring.enable = true;
+    services.udisks2.enable = true;
   };
 }
