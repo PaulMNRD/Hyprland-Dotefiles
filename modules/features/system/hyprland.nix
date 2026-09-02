@@ -20,5 +20,17 @@
     security.pam.services.hyprlock = {};
     services.gnome.gnome-keyring.enable = true;
     services.udisks2.enable = true;
+    
+    xdg.portal = {
+      enable = true;
+      extraPortals = [
+        pkgs.xdg-desktop-portal-hyprland
+        pkgs.xdg-desktop-portal-termfilechooser
+      ];
+      config.hyprland = {
+        default = [ "hyprland" "gtk" ];
+        "org.freedesktop.portal.FileChooser" = [ "termfilechooser" ];
+      };
+    };
   };
 }

@@ -1,5 +1,5 @@
 {
-  flake.homeModules.yazi = {
+  flake.homeModules.yazi = { pkgs, ... }: {
     programs.yazi = {
       enable = true;
       enableFishIntegration = true;
@@ -15,5 +15,11 @@
       name = "Yazi File Manager";
       noDisplay = true;
     };
+
+    xdg.configFile."xdg-desktop-portal-termfilechooser/config".text = ''
+      [filechooser]
+      cmd=kitty --title "Explorer" yazi
+      default_dir=$HOME
+    '';
   };
 }
