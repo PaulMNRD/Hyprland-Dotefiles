@@ -30,7 +30,8 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    match = { class = "kitty|com.gabm.satty" },
+    name = "floating-default-size",
+    match = { class = "kitty|com.gabm.satty|satty" },
     float = true,
     size = { "(monitor_w*0.8)", "(monitor_h*0.8)" },
 })

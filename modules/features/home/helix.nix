@@ -1,7 +1,6 @@
 { self, ... }: {
   flake.homeModules.helix = { pkgs, ... }: {
     imports = with self.homeModules; [
-      mistral
       yazi
       gitui
     ];

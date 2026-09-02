@@ -1,4 +1,4 @@
-{ inputs, ... }: {
+{
   flake.homeModules.vscodium = { pkgs, ... }: { 
       home.packages = with pkgs; [
         nerd-fonts.jetbrains-mono
@@ -12,7 +12,6 @@
           extensions = with pkgs.vscode-extensions; [
             catppuccin.catppuccin-vsc
             pkief.material-icon-theme
-            # vscodevim.vim
           ] ++ (with pkgs.nix-vscode-extensions.open-vsx; [
             gregoire.dance
           ]);

@@ -1,4 +1,4 @@
-{ ... }: {
+{
   flake.homeModules.cursor = { pkgs, ... }: {
     home.pointerCursor = {
       gtk.enable = true;

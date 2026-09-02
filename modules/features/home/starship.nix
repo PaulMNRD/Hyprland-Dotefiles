@@ -1,4 +1,4 @@
-{ ... }: {
+{
   flake.homeModules.starship = { lib, ... }: {
     programs.starship = {
       enable = true;

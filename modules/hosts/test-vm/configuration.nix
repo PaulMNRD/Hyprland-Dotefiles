@@ -24,10 +24,9 @@
         git
         helix
         home
-        # java
         starship
-        # vscodium
-        zen-browser
+
+        apps
       ];
     };
 
