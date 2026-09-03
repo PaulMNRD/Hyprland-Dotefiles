@@ -22,8 +22,14 @@ button {
   margin: 50px 0;
 }
 
-button:focus, button:active, button:hover {
-  /* border: 2px solid #cba6f7; */
+button:hover {
+  background-color: rgb(30, 30, 46);
+  outline-style: none;
+  animation: gradient_f 20s ease-in infinite;
+  transition: all 0.3s cubic-bezier(.55, 0.0, .28, 1.682);
+}
+
+button:focus, button:active {
   background-color: rgb(203, 166, 247);
   background-size: 60%;
   color: rgb(17, 17, 27);
@@ -51,23 +57,23 @@ button:focus, button:active, button:hover {
   border-radius: 0 30px 30px 0;
 }
 
-#lock:focus, #lock:active, #lock:hover {
+#lock:focus, #lock:active {
   background-image: url("icons/crust/lock.png");
   border-radius: 20px;
 }
-#suspend:focus, #suspend:active, #suspend:hover {
+#suspend:focus, #suspend:active {
   background-image: url("icons/crust/suspend.png");
   border-radius: 20px;
 }
-#logout:focus, #logout:active, #logout:hover {
+#logout:focus, #logout:active {
   background-image: url("icons/crust/logout.png");
   border-radius: 20px;
 }
-#shutdown:focus, #shutdown:active, #shutdown:hover {
+#shutdown:focus, #shutdown:active {
   background-image: url("icons/crust/shutdown.png");
   border-radius: 20px;
 }
-#reboot:focus, #reboot:active, #reboot:hover {
+#reboot:focus, #reboot:active {
   background-image: url("icons/crust/reboot.png");
   border-radius: 20px;
 }
