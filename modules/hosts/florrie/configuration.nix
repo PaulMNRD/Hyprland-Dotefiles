@@ -5,6 +5,7 @@
 
       options
 
+      audio
       bluetooth
       hyprland
       keyboard
@@ -12,7 +13,6 @@
       logind
       networking
       nix
-      pipewire
       boot
       user
     ];

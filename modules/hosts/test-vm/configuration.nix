@@ -5,16 +5,17 @@
 
       options
 
+      audio
       bluetooth
+      boot
       hyprland
       keyboard
       localization
       logind
       networking
       nix
-      pipewire
-      boot
       user
+      virtualisation
     ];
 
     preferences = {

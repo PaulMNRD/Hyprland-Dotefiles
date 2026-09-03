@@ -7,8 +7,10 @@
 
     home.packages = with pkgs; [
       ytmdesktop
+      signal-desktop
     ];
 
     programs.discord.enable = true;
+    programs.obsidian.enable = true;
   };
 }
