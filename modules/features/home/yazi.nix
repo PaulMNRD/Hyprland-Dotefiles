@@ -12,8 +12,13 @@
     };
 
     xdg.desktopEntries."yazi" = {
-      name = "Yazi File Manager";
-      noDisplay = true;
+      name = "File Explorer";
+      genericName = "File Manager";
+      exec = "kitty --title Explorer yazi %u";
+      icon = "system-file-manager";
+      terminal = false;
+      categories = [ "System" "FileManager" ];
+      mimeType = [ "inode/directory" ];
     };
   };
 }
