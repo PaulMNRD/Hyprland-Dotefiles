@@ -1,7 +1,8 @@
 hl.config({
     decoration = {
         rounding = 20,
-
+        dim_special = 0,
+        
         shadow = {
             enabled = true,
             range = 4,

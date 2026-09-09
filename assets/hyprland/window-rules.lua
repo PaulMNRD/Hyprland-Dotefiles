@@ -35,3 +35,9 @@ hl.window_rule({
     float = true,
     size = { "(monitor_w*0.8)", "(monitor_h*0.8)" },
 })
+
+hl.window_rule({
+    name = "kitty-terminal-special",
+    match = { class = "kitty", title = "Terminal" },
+    workspace = "special:term",
+})

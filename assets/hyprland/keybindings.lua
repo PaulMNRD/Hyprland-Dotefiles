@@ -1,7 +1,7 @@
 local mainMod = "SUPER"
 
 -- Programs
-hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("kitty"))
+hl.bind(mainMod .. " + T", hl.dsp.exec_cmd("kitty --title Terminal"))
 hl.bind(mainMod .. " + B", hl.dsp.exec_cmd("zen-beta"))
 hl.bind(mainMod .. " + E", hl.dsp.exec_cmd("kitty --title \"Explorer\" yazi"))
 hl.bind(mainMod .. " + Return", hl.dsp.exec_cmd("rofi -show drun"))
@@ -11,6 +11,7 @@ hl.bind(mainMod .. " + Delete", hl.dsp.exec_cmd("wlogout --buttons-per-row 5"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ action = "toggle" }))
+hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("term"))
 
 -- Navigation
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
