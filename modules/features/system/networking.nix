@@ -1,5 +1,9 @@
 {
-  flake.nixosModules.networking = { config, ... }: {
+  flake.nixosModules.networking = { pkgs, config, ... }: {
+    environment.systemPackages = with pkgs; [
+      proton-vpn-cli
+    ];
+
     networking.wireless.iwd = {
       enable = true;
       settings = {

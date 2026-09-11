@@ -8,6 +8,6 @@ require("keybindings")
 require("layouts")
 require("misc")
 require("monitors")
---require("start")
+require("start")
 require("window-rules")
 
