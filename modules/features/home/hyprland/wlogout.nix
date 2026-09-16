@@ -7,13 +7,13 @@
           label = "lock";
           text = "Lock";
           keybind = "l";
-          action = "sleep 0.3 && loginctl lock-session";
+          action = "sleep 0.4 && loginctl lock-session";
         }
         {
           label = "suspend";
           text = "Suspend";
           keybind = "s";
-          action = "sleep 0.3 && systemctl suspend";
+          action = "sleep 0.4 && systemctl suspend";
         }
         {
           label = "logout";

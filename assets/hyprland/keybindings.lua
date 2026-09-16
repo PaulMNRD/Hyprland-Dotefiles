@@ -11,7 +11,6 @@ hl.bind(mainMod .. " + Delete", hl.dsp.exec_cmd("wlogout --buttons-per-row 5"))
 hl.bind(mainMod .. " + Q", hl.dsp.window.close())
 hl.bind(mainMod .. " + F", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + SHIFT + F", hl.dsp.window.fullscreen({ action = "toggle" }))
-hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("term"))
 
 -- Navigation
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -34,7 +33,12 @@ hl.bind(mainMod .. " + SHIFT + N", hl.dsp.window.move({ workspace = "+1" }))
 -- Windows
 hl.bind(mainMod .. " + mouse:272", hl.dsp.window.drag(), { mouse = true })
 hl.bind(mainMod .. " + mouse:273", hl.dsp.window.resize(), { mouse = true })
-
+hl.bind(mainMod .. " + CTRL + LEFT", hl.dsp.window.swap({ direction = "left" }))
+hl.bind(mainMod .. " + CTRL + RIGHT", hl.dsp.window.swap({ direction = "right" }))
+hl.bind(mainMod .. " + CTRL + UP", hl.dsp.window.swap({ direction = "up" }))
+hl.bind(mainMod .. " + CTRL + DOWN", hl.dsp.window.swap({ direction = "down" }))
+hl.bind(mainMod .. " + SHIFT + LEFT", hl.dsp.window.move({ monitor = "0" }))
+hl.bind(mainMod .. " + SHIFT + RIGHT", hl.dsp.window.move({ monitor = "1" }))
 
 -- System tools
 hl.bind("Print", hl.dsp.exec_cmd('grim -g "$(slurp)" - | satty -f - '))

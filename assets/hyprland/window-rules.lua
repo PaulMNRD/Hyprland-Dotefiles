@@ -30,14 +30,15 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name = "floating-default-size",
-    match = { class = "kitty|com.gabm.satty|satty" },
+    name = "default-floating",
+    match = { class = "com.gabm.satty|satty" },
     float = true,
     size = { "(monitor_w*0.8)", "(monitor_h*0.8)" },
 })
 
 hl.window_rule({
-    name = "kitty-terminal-special",
-    match = { class = "kitty", title = "Terminal" },
-    workspace = "special:term",
+    name = "kitty-default-floating",
+    match = { class = "kitty", title = "Explorer|System Monitor|Wifi Settings|Bluetooth Settings" },
+    float = true,
+    size = { "(monitor_w*0.8)", "(monitor_h*0.8)" },
 })

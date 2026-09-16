@@ -21,18 +21,29 @@
       themeFile = "Catppuccin-Mocha";
 
       keybindings = {
+        "ctrl+shift+t" = "launch --type=tab --cwd=current";
         "ctrl+shift+x" = "launch --type=tab --cwd=current --tab-title=Editor hx .";
         "ctrl+shift+g" = "launch --type=tab --cwd=current --tab-title=Git gitui";
         "ctrl+shift+e" = "launch --type=tab --cwd=current --tab-title=Explorer yazi";
+        "ctrl+shift+d" = "launch --type=tab --cwd=current --tab-title=Docker lazydocker";
         "alt+1" = "goto_tab 1";
+        "alt+&" = "goto_tab 1";
         "alt+2" = "goto_tab 2";
+        "alt+é" = "goto_tab 2";
         "alt+3" = "goto_tab 3";
+        "alt+\"" = "goto_tab 3";
         "alt+4" = "goto_tab 4";
+        "alt+\'" = "goto_tab 4";
         "alt+5" = "goto_tab 5";
+        "alt+(" = "goto_tab 5";
         "alt+6" = "goto_tab 6";
+        "alt+-" = "goto_tab 6";
         "alt+7" = "goto_tab 7";
+        "alt+è" = "goto_tab 7";
         "alt+8" = "goto_tab 8";
+        "alt+_" = "goto_tab 8";
         "alt+9" = "goto_tab 9";
+        "alt+ç" = "goto_tab 9";
       };
     };
   };

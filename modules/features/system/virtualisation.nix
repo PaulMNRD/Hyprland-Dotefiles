@@ -1,5 +1,13 @@
 {
   flake.nixosModules.virtualisation = { config, pkgs, ... }: {
+    virtualisation.docker = {
+      enable = true;
+      rootless = {
+        enable = true;
+        setSocketVariable = true;
+      };
+    };
+    
     users.groups.libvirtd.members = [ config.preferences.user.name ];
     virtualisation.libvirtd = {
       enable = true;

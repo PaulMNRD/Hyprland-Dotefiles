@@ -4,6 +4,8 @@
       yazi
       gitui
     ];
+
+    programs.lazydocker.enable = true;
     
     home.packages = with pkgs; [
       nixd
@@ -43,8 +45,6 @@
           };
           "C-s" = ":w";
           "C-q" = ":bc";
-          "C-t" = ":sh kitten @ launch --no-response --type=tab --cwd=current &> /dev/null";
-          "C-g" = ":sh kitten @ launch --no-response --type=tab --cwd=current --tab-title=Git gitui &> /dev/null";
         };
       };
     };

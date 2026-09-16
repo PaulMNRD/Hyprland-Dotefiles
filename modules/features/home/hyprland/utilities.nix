@@ -38,7 +38,7 @@
     xdg.desktopEntries."impala" = {
       name = "Wifi Settings";
       genericName = "Wifi Manager";
-      exec = "kitty --title \"System Settings\" impala";
+      exec = "kitty --title \"Wifi Settings\" impala";
       icon = "network-wireless";
       terminal = false;
       categories = [ "System" "Network" ];
