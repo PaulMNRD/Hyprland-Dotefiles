@@ -1,5 +1,12 @@
-{
+{ self, ... }: {
   flake.homeModules.kitty = { pkgs, ... }: {
+    imports = with self.homeModules; [
+      yazi
+      gitui
+    ];
+
+    programs.lazydocker.enable = true;
+
     programs.kitty = {
       enable = true;
 
@@ -22,7 +29,6 @@
 
       keybindings = {
         "ctrl+shift+t" = "launch --type=tab --cwd=current";
-        "ctrl+shift+x" = "launch --type=tab --cwd=current --tab-title=Editor hx .";
         "ctrl+shift+g" = "launch --type=tab --cwd=current --tab-title=Git gitui";
         "ctrl+shift+e" = "launch --type=tab --cwd=current --tab-title=Explorer yazi";
         "ctrl+shift+d" = "launch --type=tab --cwd=current --tab-title=Docker lazydocker";

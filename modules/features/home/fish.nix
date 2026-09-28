@@ -4,6 +4,7 @@
       enable = true;
       shellInit = ''
         set fish_greeting
+        devenv hook fish | source
       '';
     };
 

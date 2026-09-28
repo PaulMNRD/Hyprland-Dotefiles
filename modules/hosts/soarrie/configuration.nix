@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ self, inputs, ... }: {
   flake.nixosModules.soarrieConfiguration = { pkgs, ... }: {
     imports = with self.nixosModules; [
       soarrieHardware
@@ -24,7 +24,6 @@
       homeModules = with self.homeModules; [
         fish
         git
-        helix
         home
         starship
 
@@ -45,13 +44,14 @@
       enable32Bit = true;
     };
 
-    environment.sessionVariables = {
-      LIBVA_DRIVER_NAME = "iHD";
-    };
-
-    environment.systemPackages = with pkgs; [
-      helix
+    environment.systemPackages = (with pkgs; [
+      devenv
+      lunar-client
       git
+    ]) ++ [
+      (inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
+        enableYaziIntegration = true;
+      })
     ];
 
     system.stateVersion = "26.05";

@@ -18,6 +18,8 @@
       inputs.home-manager.follows = "home-manager";
     };
 
+    helix.url = "github:PaulMNRD/helix";
+
     nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
   };
 

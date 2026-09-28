@@ -10,7 +10,7 @@
       signal-desktop
     ];
 
-    programs.discord.enable = true;
+    programs.vesktop.enable = true;
     programs.obsidian.enable = true;
   };
 }

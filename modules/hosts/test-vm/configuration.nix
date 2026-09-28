@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ self, inputs, ... }: {
   flake.nixosModules.testVmConfiguration = { pkgs, ... }: {
     imports = with self.nixosModules; [
       testVmHardware
@@ -23,7 +23,6 @@
       homeModules = with self.homeModules; [
         fish
         git
-        helix
         home
         starship
 
@@ -40,10 +39,10 @@
       };
     };
 
-    environment.systemPackages = with pkgs; [
-      helix
+    environment.systemPackages = (with pkgs; [
+      devenv
       git
-    ];
+    ]) ++ [ inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default ];
 
     system.stateVersion = "26.05";
   };

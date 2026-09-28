@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ self, inputs, ... }: {
   flake.nixosModules.florrieConfiguration = { pkgs, ... }: {
     imports = with self.nixosModules; [
       florrieHardware
@@ -22,7 +22,6 @@
       homeModules = with self.homeModules; [
         fish
         git
-        helix
         home
         starship
 
@@ -38,9 +37,13 @@
       };
     };
 
-    environment.systemPackages = with pkgs; [
-      helix
+    environment.systemPackages = (with pkgs; [
+      devenv
       git
+    ]) ++ [
+      (inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
+        enableYaziIntegration = true;
+      })
     ];
 
     system.stateVersion = "26.05";

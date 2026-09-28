@@ -1,4 +1,4 @@
-{ self, ... }: {
+{ self, inputs, ... }: {
   flake.nixosModules.dorrieConfiguration = { pkgs, ... }: {
     imports = with self.nixosModules; [
       dorrieHardware
@@ -24,7 +24,6 @@
       homeModules = with self.homeModules; [
         fish
         git
-        helix
         home
         starship
 
@@ -53,10 +52,10 @@
       LIBVA_DRIVER_NAME = "iHD";
     };
 
-    environment.systemPackages = with pkgs; [
-      helix
+    environment.systemPackages = (with pkgs; [
+      devenv
       git
-    ];
+    ]) ++ [ inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default ];
 
     system.stateVersion = "26.05";
   };
