@@ -6,6 +6,7 @@
       options
 
       audio
+      android-dev
       bluetooth
       boot
       hyprland
