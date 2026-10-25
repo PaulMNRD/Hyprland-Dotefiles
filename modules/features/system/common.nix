@@ -31,7 +31,7 @@
     environment.systemPackages = (with pkgs; [
       unstable.devenv
       unstable.zed-editor-fhs
-      unstable.opencode
+      unstable.claude-code
       chromium
       lunar-client
       git

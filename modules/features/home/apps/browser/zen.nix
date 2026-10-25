@@ -310,7 +310,7 @@
             };
         };
 
-        keyboardShortcutsVersion = 20;
+        keyboardShortcutsVersion = 21;
         keyboardShortcuts = [
           {
             id = "zen-workspace-switch-1";
