@@ -14,3 +14,9 @@ end
 for i = 6, 10 do
     hl.workspace_rule({ workspace = tostring(i), monitor = "DP-2" })
 end
+
+hl.config({
+  xwayland = {
+    force_zero_scaling = true
+  }
+})
