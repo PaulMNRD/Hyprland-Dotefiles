@@ -2,7 +2,12 @@
   flake.nixosModules.nix = {
     nixpkgs = {
       config.allowUnfree = true;
-      overlays = [ inputs.nix-vscode-extensions.overlays.default ];
+      overlays = [
+        inputs.nix-vscode-extensions.overlays.default
+        (final: prev: {
+          unstable = inputs.nixpkgs-unstable.legacyPackages.${prev.system};
+        })
+      ];
     };
         
     nix.gc = {

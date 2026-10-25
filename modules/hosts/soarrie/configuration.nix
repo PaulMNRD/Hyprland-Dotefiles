@@ -1,36 +1,11 @@
-{ self, inputs, ... }: {
+{ self, ... }: {
   flake.nixosModules.soarrieConfiguration = { pkgs, ... }: {
     imports = with self.nixosModules; [
       soarrieHardware
-
-      options
-
-      audio
-      android-dev
-      bluetooth
-      boot
-      hyprland
-      keyboard
-      localization
-      logind
-      networking
-      nix
-      steam
-      user
-      virtualisation
+      common
     ];
 
-    preferences = {
-      hostname = "paul-test-laptop";
-      homeModules = with self.homeModules; [
-        fish
-        git
-        home
-        starship
-
-        apps
-      ];
-    };
+    preferences.hostname = "paul-desktop";
 
     boot = {
       kernelPackages = pkgs.linuxPackages_latest;
@@ -44,17 +19,5 @@
       enable = true;
       enable32Bit = true;
     };
-
-    environment.systemPackages = (with pkgs; [
-      devenv
-      lunar-client
-      git
-    ]) ++ [
-      (inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default.override {
-        enableYaziIntegration = true;
-      })
-    ];
-
-    system.stateVersion = "26.05";
   };
 }

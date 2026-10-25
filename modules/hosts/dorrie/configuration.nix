@@ -1,36 +1,11 @@
-{ self, inputs, ... }: {
+{ self, ... }: {
   flake.nixosModules.dorrieConfiguration = { pkgs, ... }: {
     imports = with self.nixosModules; [
       dorrieHardware
-
-      options
-
-      audio
-      android-dev
-      bluetooth
-      boot
-      hyprland
-      keyboard
-      localization
-      logind
-      networking
-      nix
-      steam
-      user
-      virtualisation
+      common
     ];
 
-    preferences = {
-      hostname = "paul-test-laptop";
-      homeModules = with self.homeModules; [
-        fish
-        git
-        home
-        starship
-
-        apps
-      ];
-    };
+    preferences.hostname = "paul-laptop";
 
     boot = {
       kernelPackages = pkgs.linuxPackages_latest;
@@ -52,12 +27,5 @@
     environment.sessionVariables = {
       LIBVA_DRIVER_NAME = "iHD";
     };
-
-    environment.systemPackages = (with pkgs; [
-      devenv
-      git
-    ]) ++ [ inputs.helix.packages.${pkgs.stdenv.hostPlatform.system}.default ];
-
-    system.stateVersion = "26.05";
   };
 }
